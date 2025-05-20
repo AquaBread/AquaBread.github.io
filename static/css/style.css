@@ -4,11 +4,10 @@
     --colorsecondary: #547792; 
     --colorbackground: #213448; 
     --colorsurface: #0B141E;
-    --textcolor: #ECEFCA;
+    --textcolor: #aaa;
     --headshotBackground: #ecf2f8;
     --togglercolor: #f2f3f4;
     --ff: 'Roboto', sans-serif;
-    --tf: 'Myriad Pro', sans-serif;
     --margin-xxs: .25rem;
     --margin-xs: .5rem;
     --margin-s: .75rem;
@@ -110,13 +109,10 @@ ul.list-unstyled li h4 {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
     width: 100vw;        /* full viewport width */
     height: 100vh;       /* full viewport height */
-
     margin: 0;
     padding: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,8 +125,6 @@ ul.list-unstyled li h4 {
 .navbar {
     background-color: var(--colorbackground);
     box-shadow: var(--shadow);
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
 }
 .sub-navbar {
     background-color: var(--colorbackground);
@@ -139,19 +133,23 @@ ul.list-unstyled li h4 {
 }
 .navbar-dark .navbar-nav .nav-link,
 .sub-navbar .nav-link {
-    color: var(--textcolor);
-    font-weight: 500;
-    padding: 1rem 2rem;
-    transition: color var(--transition);
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 999px; /* pill shape */
+    padding: 0.4rem 1rem;
+    color: inherit;
+    background-color: transparent; /* No bubble on hover */
 }
 .navbar-dark .navbar-nav .nav-link:hover,
 .sub-navbar .nav-link.active {
+    background-color: var(--colorprimary);
     color: var(--colorprimary);
 }
-.nav-link:hover  {
-    color: var(--colorprimary); 
+#sub-navbar .nav-link:not(.active):hover {
+    color: var(--colorprimary); /* Optional: color change on hover */
+    background-color: transparent !important; /* Prevent hover bubble */
+    text-decoration: none;
 }
 .sub-navbar .nav-link.active {
-    color: var(--colorsecondary) !important;
-    border-bottom: 2px solid var(--colorprimary);
+    background-color: var(--colorprimary);
+    color: var(--colorbackground) !important;
 }
