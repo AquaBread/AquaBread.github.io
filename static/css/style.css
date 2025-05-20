@@ -26,8 +26,10 @@
     --subtext: 12px/20px var(--ff);
 
     --transition: 0.3s ease-in-out;
-    --shadow: 0 4px 12px rgba(131, 169, 210, 0.1);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     --darkshadow: 0px 5px 10px 5px var(--colorbackground);
+
+    --backgroundImg: url('../img/bg.jpg');
 }
 
 /* ========== Base Elements ========== */
@@ -72,6 +74,28 @@ ul.list-unstyled li h4 {
   color: var(--colorsecondary);
 }
 
+/* Divider */
+.section-divider {
+  border: none;
+  height: 2px;
+  width: 66.666%;
+  margin: 2rem auto;
+  background: linear-gradient(to right, var(--colorprimary), var(--colorsecondary));
+  opacity: 0.8;
+  border-radius: 5px;
+  animation: fadeInDivider 1s ease-in-out;
+}
+@keyframes fadeInDivider {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 0.8;
+    width: 60px;
+  }
+}
+
 /* Social Icons */
 .social-icons {
   display: flex;
@@ -88,8 +112,8 @@ ul.list-unstyled li h4 {
   text-decoration: none!important;
 }
 .social-icons a i {
-  font-size: 24px;
-  color: var(--colorsecondary);
+  font-size: 30px;
+  color: var(--textcolor);
 }
 .social-icons a:hover i {
   color: var(--colorprimary);
@@ -104,7 +128,7 @@ ul.list-unstyled li h4 {
 
 /* Hero Section */
 .hero-section {
-    background-image: url('../img/bg.jpg'); /* adjust path */
+    background-image: var(--backgroundImg); /* adjust path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -122,34 +146,75 @@ ul.list-unstyled li h4 {
 }
 
 /* Sub-Nav */
-.navbar {
-    background-color: var(--colorbackground);
-    box-shadow: var(--shadow);
-}
+/* General Navbar Styling */
+.navbar,
 .sub-navbar {
     background-color: var(--colorbackground);
-    box-shadow: var(--shadow);
-    z-index: 1050; /* Ensures it's above other elements */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    z-index: 1050;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-.navbar-dark .navbar-nav .nav-link,
+/* Sub-navbar nav links */
 .sub-navbar .nav-link {
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 999px; /* pill shape */
-    padding: 0.4rem 1rem;
-    color: inherit;
-    background-color: transparent; /* No bubble on hover */
+    position: relative;
+    color: var(--colortext, #ffffff);
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    margin: 0 0.4rem;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    border: 1px solid transparent;
 }
-.navbar-dark .navbar-nav .nav-link:hover,
-.sub-navbar .nav-link.active {
-    background-color: var(--colorprimary);
+/* Hover effect */
+.sub-navbar .nav-link:hover {
+    background-color: rgba(var(--colorprimary, 0, 123, 255), 0.1);
     color: var(--colorprimary);
 }
-#sub-navbar .nav-link:not(.active):hover {
-    color: var(--colorprimary); /* Optional: color change on hover */
-    background-color: transparent !important; /* Prevent hover bubble */
-    text-decoration: none;
-}
+/* Active link */
 .sub-navbar .nav-link.active {
     background-color: var(--colorprimary);
     color: var(--colorbackground) !important;
+    border: 1px solid var(--colorprimary);
+}
+/* Mobile section title */
+#current-section-title {
+    font-size: 1.1rem;
+    color: var(--colorprimary);
+    padding-left: 0.5rem;
+}
+/* Mobile nav toggler */
+.navbar-toggler {
+    border: none;
+    box-shadow: none;
+}
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+/* Optional: Add subtle blur effect on scroll */
+.sub-navbar.sticky-top {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(var(--colorbackground, 255,255,255), 0.85);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Contact */
+#contact {
+    background-image: var(--backgroundImg); /* adjust path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100vw;        /* full viewport width */
+    height: 50vh;       /* full viewport height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
 }
