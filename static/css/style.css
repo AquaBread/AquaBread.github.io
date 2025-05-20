@@ -1,0 +1,69 @@
+:root {
+  --colorprimary: #83a9d2;
+  --colorsecondary: #83a9d2;
+  --colorbackground: #121212;
+  --colorsurface: #0B141E;
+  --textcolor: #aaa;
+  --headshotBackground: #ecf2f8;
+  --togglercolor: #f2f3f4;
+
+  --ff: 'Roboto', sans-serif;
+
+  --margin-xs: 0.5rem;
+  --margin-m: 1rem;
+  --margin-l: 1.25rem;
+  --margin-xl: 1.75rem;
+
+  --transition: 0.3s ease-in-out;
+  --shadow: 0 4px 12px rgba(131, 169, 210, 0.1);
+  --darkshadow: 0 5px 10px 5px var(--colorbackground);
+}
+
+body {
+  font-family: var(--ff);
+}
+
+.links {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--colorprimary);
+  transition: color var(--transition);
+}
+
+.links:hover {
+  text-decoration: none;
+  color: var(--colorsecondary);
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin: var(--margin-m) 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icons a i {
+  font-size: 24px;
+  color: var(--colorsecondary);
+}
+
+.social-icons a:hover i {
+  color: var(--colorprimary);
+  transform: scale(1.1);
+}
+
+.social-icons a:focus,
+.social-icons a:active,
+.social-icons a:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
