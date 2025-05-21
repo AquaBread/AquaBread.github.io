@@ -4,7 +4,7 @@
     --colorsecondary: #547792; 
     --colorbackground: #213448; 
     --colorsurface: #0B141E;
-    --textcolor: #aaa;
+    --textcolor: white;
     --headshotBackground: #ecf2f8;
     --togglercolor: #f2f3f4;
     --ff: 'Roboto', sans-serif;
@@ -29,7 +29,7 @@
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     --darkshadow: 0px 5px 10px 5px var(--colorbackground);
 
-    --backgroundImg: url('../img/bg.jpg');
+    --backgroundImg: url('../img/bg1.jpg');
 }
 
 /* ========== Base Elements ========== */
@@ -144,6 +144,27 @@ ul.list-unstyled li h4 {
     color: white;
     position: relative;
 }
+/* Overlay */
+.hero-section::before, #contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 52, 72, 0.5); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+/* Ensure content stays above overlay */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+#contact .container {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* Sub-Nav */
 /* General Navbar Styling */
