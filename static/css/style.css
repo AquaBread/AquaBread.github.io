@@ -40,6 +40,15 @@ body {
     transition: background-color .3s ease, color .3s ease;
 }
 
+h1 {
+    color: var(--colortext); /* Set your main text color */
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+}
+
 h1, h2, h3, h4, h5 {
     color: var(--colorprimary);
 }
