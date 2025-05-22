@@ -14,6 +14,43 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="static/css/style.css" />
+
+  <style>
+    .hero-section {
+        background-image: url('/static/img/bg1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+    #contact {
+        background-image: url('/static/img/bg1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 50vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+  </style>
 </head>
 <body>
     <!-- Hero Section -->
@@ -45,7 +82,7 @@
             <div id="subNavbarNav" class="collapse navbar-collapse justify-content-center">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#abt">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="#xp">Experience</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#xp">Experience</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="#proj">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
@@ -78,15 +115,17 @@
 
     <hr class="section-divider">
 
-    <!-- Experience -->
+    <!-- Experience 
     <section id="xp" class="py-5">
     <div class="container text-center">
         <h2 class="mb-5">Experience</h2>
         <p>This section will include brief description of experience</p>
     </div>
     </section>
+    
 
     <hr class="section-divider">
+    -->
 
     <!-- Projects -->
     <section id="proj" class="py-5">
@@ -139,7 +178,7 @@
 
         const sectionMap = {
             abt: "About Me",
-            xp: "Experience",
+            //xp: "Experience",
             proj: "Projects",
             contact: "Contact"
         };
@@ -151,18 +190,22 @@
         }
 
         function getCurrentSectionId() {
+            const scrollPosition = window.scrollY + getNavHeight() + 20; // Add a little buffer
             let currentId = "abt";
+
             Object.keys(sectionMap).forEach(id => {
-            const el = document.getElementById(id);
-            if (el) {
-                const rect = el.getBoundingClientRect();
-                if (rect.top <= 120 && rect.bottom >= 120) {
-                currentId = id;
+                const el = document.getElementById(id);
+                if (el) {
+                    const sectionTop = el.offsetTop;
+                    if (scrollPosition >= sectionTop) {
+                        currentId = id;
+                    }
                 }
-            }
             });
+
             return currentId;
         }
+
 
         function updateActiveNav() {
             const currentId = getCurrentSectionId();
