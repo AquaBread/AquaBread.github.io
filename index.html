@@ -50,6 +50,60 @@
         color: white;
         position: relative;
     }
+
+    .project-card {
+        position: relative;
+        border: 1px solid #ddd;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: var(--colorcard);
+        cursor: pointer;
+    }
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .project-card .card-body {
+        padding: 1rem;
+    }
+    .project-card .card-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .project-card .skills-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0.5rem 0 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    .project-card .skills-list li {
+        background-color: var(--colorprimary);
+        color: var(--textcolor);
+        padding: 0.3rem 0.6rem;
+        border-radius: 12px;
+        font-size: 0.85rem;
+    }
+    .project-card .stretched-link {
+        color: var(--colorprimary);
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .project-card .stretched-link:hover {
+        text-decoration: underline;
+    }
+    .card-title {
+        color: var(--textcolor);
+    }
+
   </style>
 </head>
 <body>
@@ -129,11 +183,45 @@
 
     <!-- Projects -->
     <section id="proj" class="py-5">
-    <div class="container text-center">
-        <h2 class="mb-5">Projects</h2>
-        <p>This section will include an array of cards that have an image and description of a project.</p>
-        <p>These cards have links to a detailed page of the project</p>
-    </div>
+        <div class="container text-center">
+            <h2 class="mb-5">Projects</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                <!-- Project Card -->
+                <div class="col">
+                    <div class="project-card h-100">
+                    <img src="projects/assets/pUberRides/uber.jpg" class="card-img-top" alt="Project 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Uber Ride Weather Analysis</h5>
+                        <p class="mb-1">Focus: Info Visualization</p>
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Matplotlib</li>
+                        </ul>
+                        <a href="projects/pUberRides.html" class="stretched-link">View Project</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="project-card h-100">
+                    <img src="projects/assets/template/tempImg.png" class="card-img-top" alt="Project 2 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Web UI Redesign</h5>
+                        <p class="mb-1">Focus: UI Design & Dev</p>
+                        <ul class="skills-list">
+                            <li>skill</li>
+                            <li>skill</li>
+                            <li>skill</li>
+                        </ul>
+                        <a href="projects/p_template.html" class="stretched-link">View Project</a>
+                    </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
     </section>
 
     <!-- Contact -->
