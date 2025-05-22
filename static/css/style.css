@@ -1,13 +1,13 @@
 :root {
     --colorprimary: #62b1f3;
-    --colorsecondary: #547792;
+    --colorsecondary: #020024;
+    --coloraccent: #2e87e5;
     --colorbackground: #213448;
-    --colorsurface: #0B141E;
     --textcolor: white;
     --textcolorcontrast: black;
     --headshotBackground: #ecf2f8;
     --togglercolor: #f2f3f4;
-    --colorcard: #062C4C;
+    --colorcard: #2D4762;
     --ff: 'Roboto', sans-serif;
     --margin-xxs: .25rem;
     --margin-xs: .5rem;
@@ -41,13 +41,13 @@ body {
     transition: background-color .3s ease, color .3s ease;
 }
 
-h1 {
-    color: var(--colortext); /* Set your main text color */
-    text-shadow: 
-        -1px -1px 0 #fff,  
-         1px -1px 0 #fff,
-        -1px  1px 0 #fff,
-         1px  1px 0 #fff;
+.wordborder {
+    color: var(--colorprimary); /* Set your main text color */
+    text-shadow:
+    -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+    1px  1px 0 #fff;
 }
 
 h1, h2, h3, h4, h5 {
