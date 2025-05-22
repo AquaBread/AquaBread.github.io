@@ -58,10 +58,10 @@
             border-radius: 5px;
         }
 
-        #sub-navbar .navbar-brand {
+        #sub-navbar .navbar-home {
             font-size: 1.25rem;
             font-weight: 700;
-            color: var(--colorbackground);
+            color: var(--colorsecondary);
             background-color: var(--colorprimary);
             padding: 6px 14px;
             border-radius: 1rem;
@@ -70,11 +70,11 @@
             transform: scale(1); 
         }
 
-        #sub-navbar .navbar-brand:hover {
-            color: var(--colorbackground);
+        #sub-navbar .navbar-home:hover {
+            color: var(--colorsecondary);
             text-decoration: none;
-            transform: scale(1.1); /* Slight "bubble" grow effect */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional soft shadow */
+            transform: scale(1.05); /* Slight "bubble" grow effect */
+            box-shadow: var(--shadow); /* Optional soft shadow */
         }
 
         #project-section {
@@ -86,6 +86,34 @@
 
         #project-section a {
             color: var(--colorprimary);
+            text-decoration: none;
+        }
+
+        .project-buttons {
+            margin-top: 20px;
+        }
+        .button-github,
+        .button-presentation {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        .button-github {
+            background-color: var(--colorprimary);
+            color: var(--colorsecondary);
+        }
+        .button-presentation {
+            background-color: var(--colorsecondary);
+            color: var(--colortext);
+        }
+        .button-github:hover,
+        .button-presentation:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow);
             text-decoration: none;
         }
     </style>
@@ -103,7 +131,7 @@
         <div class="container-fluid position-relative" style="min-height: 9vh;">
 
             <!-- Left-aligned Home Link -->
-            <a class="navbar-brand fw-bold" href="../index.html">Home</a>
+            <a class="navbar-home fw-bold" href="../index.html">Home</a>
 
             <!-- Mobile Section Title -->
             <div id="current-section-title" class="fw-medium d-lg-none text-primary">
@@ -144,10 +172,24 @@
         <!-- Conclusion -->
         <h3 id="con">Conclusion</h3>
 
+        <div class="project-buttons">
+            <a href="https://github.com/Barbsbhg/Group1_Project1/tree/main" target="_blank">
+                <button class="button-github">
+                View GitHub Repo
+                </button>
+            </a>
+
+            <a href="https://docs.google.com/presentation/d/1D83LbAhGA92a7RHKmA0KWgydw0dEcBgfd_N1MeQ3gVU/edit?slide=id.p1#slide=id.p1" target="_blank">
+                <button class="button-presentation">
+                View Presentation
+                </button>
+            </a>
+        </div>
+
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-5 text-var(--textcolor)">
+    <section id="contact" class="py-5 text-var(--colortext)">
         <div class="container text-center">
             <h2 class="mb-4 wordborder">Let's Connect</h2>
             <p class="lead mb-4">Whether you'd like to collaborate, have a question, or just want to say hello — I’d love to hear from you!</p>
