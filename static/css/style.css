@@ -3,7 +3,7 @@
     --colorsecondary: #020024;
     --coloraccent: #2e87e5;
     --colorbackground: #213448;
-    --textcolor: white;
+    --colortext: white;
     --textcolorcontrast: black;
     --headshotBackground: #ecf2f8;
     --togglercolor: #f2f3f4;
@@ -81,7 +81,7 @@ h5 {
 }
 
 p, ul, .card-text {
-    color: var(--textcolor);
+    color: var(--colortext);
     font: var(--p);
 }
 
@@ -142,7 +142,7 @@ ul.list-unstyled li h4 {
 
 .social-icons a i {
     font-size: 30px;
-    color: var(--textcolor);
+    color: var(--colortext);
 }
 
 .social-icons a:hover i {
@@ -177,7 +177,7 @@ ul.list-unstyled li h4 {
 }
 
 .navbar, .sub-navbar {
-    background-color: var(--colorbackground);
+    background-color: var(--colorsecondary);
     box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
     z-index: 1050;
     border-bottom: 1px solid rgba(255, 255, 255, .05);
@@ -202,7 +202,7 @@ ul.list-unstyled li h4 {
 
 .sub-navbar .nav-link.active {
     background-color: var(--colorprimary);
-    color: var(--colorbackground) !important;
+    color: var(--colorsecondary) !important;
     border: 1px solid var(--colorprimary);
 }
 
@@ -225,6 +225,6 @@ ul.list-unstyled li h4 {
 .sub-navbar.sticky-top {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(var(--colorbackground, 255, 255, 255), .85);
+    background-color: rgba(var(--colorsecondary, 255, 255, 255), .85);
     transition: background-color .3s ease-in-out;
 }

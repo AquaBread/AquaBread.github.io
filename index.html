@@ -61,7 +61,7 @@
     }
     .project-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        box-shadow: var(--shadow);
     }
     .project-card img {
         width: 100%;
@@ -86,7 +86,7 @@
     }
     .project-card .skills-list li {
         /*background-color: var(--colorprimary);
-        color: var(--textcolor);
+        color: var(--colortext);
         padding: 0.3rem 0.6rem;
         border-radius: 12px;
         */
@@ -112,7 +112,7 @@
         <div class="container">
             <h1 class="display-4 fw-bold mb-3 wordborder">Hi, I'm Brian A. Paniagua</span></h1>
             <p class="lead fst-italic mb-4">“One never notices what has been done; one can only see what remains to be done.”<br><span class="fw-light">– Marie Curie</span></p>
-            <a href="#abt" class="btn btn-lg px-4 py-2" style="transition: transform var(--transition); background-color: var(--colorprimary); color: var(--colorbackground); border-radius: 12px; font-weight: 600;">
+            <a href="#abt" class="btn btn-lg px-4 py-2" style="transition: transform var(--transition); background-color: var(--colorprimary); color: var(--colorsecondary); border-radius: 12px; font-weight: 600;">
             Let's learn more!
             </a>
         </div>
@@ -186,36 +186,52 @@
         <div class="container">
             <h2 class="mb-5 text-center">Projects</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-                <!-- Project Card -->
+                <!-- Uber Card -->
                 <div class="col">
                     <div class="project-card h-100">
-                    <img src="projects/assets/pUberRides/uber.jpg" class="card-img-top" alt="Project 1 Image">
-                    <div class="card-body">
-                        <h4 class="card-title">Uber Ride Weather Analysis</h4>
-                        <p class="mb-1">Diagnostic Analytics</p>
-                        <ul class="skills-list">
-                            <li>Data Wrangling</li>
-                            <li>Pandas</li>
-                            <li>Matplotlib</li>
-                        </ul>
-                        <a href="projects/pUberRides.html" class="stretched-link">View Project</a>
-                    </div>
+                        <img src="projects/assets/pUberRides/uber.jpg" class="card-img-top" alt="Project 1 Image">
+                        <div class="card-body">
+                            <h4 class="card-title">Uber Ride Weather Analysis</h4>
+                            <p class="mb-1">Diagnostic Analytics</p>
+                            <ul class="skills-list">
+                                <li>Data Wrangling</li>
+                                <li>Pandas</li>
+                                <li>Matplotlib</li>
+                            </ul>
+                            <a href="projects/pUberRides.html" class="stretched-link">View Project</a>
+                        </div>
                     </div>
                 </div>
-
+                <!-- Template Card -->
                 <div class="col">
                     <div class="project-card h-100">
-                    <img src="projects/assets/template/tempImg.png" class="card-img-top" alt="Project 2 Image">
-                    <div class="card-body">
-                        <h4 class="card-title">Web UI Redesign</h4>
-                        <p class="mb-1">UI Design & Dev</p>
-                        <ul class="skills-list">
-                            <li>skill</li>
-                            <li>skill</li>
-                            <li>skill</li>
-                        </ul>
-                        <a href="projects/p_template.html" class="stretched-link">View Project</a>
+                        <img src="projects/assets/template/tempImg.png" class="card-img-top" alt="Project 2 Image">
+                        <div class="card-body">
+                            <h4 class="card-title">Web UI Redesign</h4>
+                            <p class="mb-1">UI Design & Dev</p>
+                            <ul class="skills-list">
+                                <li>skill</li>
+                                <li>skill</li>
+                                <li>skill</li>
+                            </ul>
+                            <a href="projects/p_template.html" class="stretched-link">View Project</a>
+                        </div>
                     </div>
+                </div>
+                <!-- Template Card -->
+                <div class="col">
+                    <div class="project-card h-100">
+                        <img src="projects/assets/template/tempImg.png" class="card-img-top" alt="Project 2 Image">
+                        <div class="card-body">
+                            <h4 class="card-title">Web UI Redesign</h4>
+                            <p class="mb-1">UI Design & Dev</p>
+                            <ul class="skills-list">
+                                <li>skill</li>
+                                <li>skill</li>
+                                <li>skill</li>
+                            </ul>
+                            <a href="projects/p_template.html" class="stretched-link">View Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
