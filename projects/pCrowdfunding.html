@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project: Title</title>
+
+    <!-- Font Awesome (deferred load) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <style>
+        .hero-section {
+            background-image: url('assets/pCrowdfunding/crowdfunding.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 50vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        #contact {
+            background-image:  url('assets/pCrowdfunding/crowdfunding.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 50vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .section-divider {
+            border: none;
+            height: 2px;
+            width: 900px;
+            margin: 2rem auto;
+            background: linear-gradient(to right, var(--colorprimary), var(--colorsecondary));
+            opacity: .8;
+            border-radius: 5px;
+        }
+
+        #sub-navbar .navbar-home {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--colorsecondary);
+            background-color: var(--colorprimary);
+            padding: 6px 14px;
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            transform: scale(1); 
+        }
+
+        #sub-navbar .navbar-home:hover {
+            color: var(--colorsecondary);
+            text-decoration: none;
+            transform: scale(1.05); /* Slight "bubble" grow effect */
+            box-shadow: var(--shadow); /* Optional soft shadow */
+        }
+
+        #project-section {
+            max-width: 900px;
+            margin: auto;
+            padding: 2em;
+            line-height: 1.6;
+        }
+
+        #project-section a {
+            color: var(--colorprimary);
+            text-decoration: none;
+        }
+
+        .project-buttons {
+            margin-top: 20px;
+        }
+        .button-github,
+        .button-presentation {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        .button-github {
+            background-color: var(--colorprimary);
+            color: var(--colorsecondary);
+        }
+        .button-presentation {
+            background-color: var(--colorsecondary);
+            color: var(--colortext);
+        }
+        .button-github:hover,
+        .button-presentation:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-white py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3 wordborder">Crowdfunding Data Pipeline</span></h1>
+        </div>
+    </section>
+
+    <!-- Navbar -->
+    <nav id="sub-navbar" class="navbar navbar-expand-lg navbar-dark sub-navbar sticky-top">
+        <div class="container-fluid position-relative" style="min-height: 9vh;">
+
+            <!-- Left-aligned Home Link -->
+            <a class="navbar-home fw-bold" href="../index.html">Home</a>
+
+            <!-- Mobile Section Title -->
+            <div id="current-section-title" class="fw-medium d-lg-none text-primary">
+                <strong>Overview</strong>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#subNavbarNav" aria-controls="subNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Centered Nav Links (absolutely positioned) -->
+            <div id="subNavbarNav" class="collapse navbar-collapse justify-content-center position-absolute start-50 translate-middle-x">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#pdesc">Project Description</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trans">Data Transfomation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#con">Conclusion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project section for indentation -->
+    <section id="project-section">
+
+        <hr class="section-divider">
+        
+        <!-- Project Description -->
+        <h3 id="pdesc">Project Description</h3>
+        <p>
+            This project focuses on performing a complete Extract, Transform, Load (ETL) pipeline on a real-world crowdfunding dataset sourced from Excel spreadsheets. The project aims to clean, normalize, and restructure raw data into a well-organized PostgreSQL relational database. The end goal is to make the data easy to analyze and derive insights from.
+        </p>
+
+        <hr class="section-divider">
+
+        <!-- Extraction -->
+        <h3>Extraction of Data</h3>
+        <p>The raw data was extracted from the following Excel files:</p>
+        <ul>
+            <li>
+                crowdfunding.xlsx – Contains campaign details including category, subcategory, funding goals, dates, and more.
+            </li>
+            <li>
+                contacts.xlsx – Contains embedded JSON-formatted contact information.
+            </li>
+        </ul>
+        <p>Process:</p>
+        <ul>
+            <li>
+                The main campaign data was read using Pandas Python library.
+            </li>
+            <li>
+                The category and subcategory columns were split from the combined category & sub-category field.
+            </li>
+            <li>
+                Unique categories and subcategories were extracted into lists.
+            </li>
+            <li>
+                The contact spreadsheet was parsed from a JSON-like structure embedded in a single column, with each row converted into structured rows of contact info.
+            </li>
+        </ul>
+
+        <hr class="section-divider">
+
+        <!-- Transformation -->
+        <h3 id="trans">Data Transformation</h3>
+        <p>
+            The transformation phase included restructuring the data into normalized formats across several DataFrames:
+        </p>
+        <h4>Category and Subcategory</h4>
+        <ul>
+            <li>
+                Unique categories and subcategories were each assigned a unique ID using list comprehensions.
+            </li>
+            <li>
+                Prefixes were added to generate readable IDs.
+            </li>
+            <li>
+                Resulting data was stored in category.csv and subcategory.csv
+            </li>
+        </ul>
+        <h4>Campaign</h4>
+        <ul>
+            <li>
+                Data formatting such as renaming columns and type conversions.
+            </li>
+            <li>
+                Merged campaign data with category and subcategory dataframes to add respective IDs.
+            </li>
+            <li>
+                Exported as campaign.csv
+            </li>
+        </ul>
+        <h4>Contacts Transformation</h4>
+        <ul>
+            <li>
+                Parsed JSON strings from the contacts Excel file.
+            </li>
+            <li>
+                Extracted and split name into first_name and last_name.
+            </li>
+            <li>
+                Reorganized columns and validated datatypes.
+            </li>
+            <li>
+                Exported as contacts.csv
+            </li>
+        </ul>
+
+        <hr class="section-divider">
+
+        <!-- Load -->
+        <h3 id="load">Load</h3>
+        <p>
+            The cleaned and transformed CSV files (category.csv, subcategory.csv, campaign.csv, contacts.csv) were loaded into a PostgreSQL database using 'SQL CREATE TABLE' and 'COPY' commands.
+            Primary keys and foreign keys were defined based on the ERD created by Amanda, ensuring relational integrity.
+        </p>
+
+        <hr class="section-divider">
+
+        <!-- Data Analysis -->
+        <h3 id="data">Data Analysis</h3>
+        <img src="assets/pCrowdfunding/QuickDBD-export.png" alt="Mean Temp vs Trips" style="max-width: 100%; height: auto; padding: 10px;">
+        <p>With a structured schema in PostgreSQL:</p>
+        <ul>
+            <li>
+                Queries can now efficiently join campaign with contacts, category, and subcategory to analyze: which categories raise the most funding, which campaigns perform best over time, and user-specific campaign trends.
+            </li>
+            <li>
+                Dates are now in SQL-friendly format, enabling time-series analysis.
+            </li>
+            <li>
+                Normalization improves performance and simplifies visualizations for future dashboards (such as Tableau, Power BI).
+            </li>
+        </ul>
+
+        <hr class="section-divider">
+
+        <!-- Conclusion -->
+        <h3 id="con">Conclusion</h3>
+        <p>
+            This project successfully demonstrated the use of ETL processes to clean, structure, and analyze real-world data. Each team member's contribution was vital to creating a normalized database ready for insightful queries and analysis.
+        </p>
+
+        <div class="project-buttons">
+            <a href="https://github.com/AquaBread/Project2_ETL" target="_blank">
+                <button class="button-github">
+                View GitHub Repo
+                </button>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 text-var(--colortext)">
+        <div class="container text-center">
+            <h2 class="mb-4 wordborder">Let's Connect</h2>
+            <p class="lead mb-4">Whether you'd like to collaborate, have a question, or just want to say hello — I’d love to hear from you!</p>
+
+            <h4 class="mb-3 wordborder">Reach me at:</h4>
+            <div class="social-icons d-flex justify-content-center gap-4 fs-3">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/brian-a-paniagua" target="_blank" aria-label="LinkedIn" class="text-decoration-none text-info">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:brianpaniagua4@gmail.com" aria-label="Email" class="text-decoration-none text-warning">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/AquaBread" target="_blank" aria-label="GitHub" class="text-decoration-none text-light">
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Sub-Navbar JS -->
+    <script>
+        const navLinks = document.querySelectorAll("#sub-navbar .nav-link");
+        const currentSectionTitle = document.getElementById("current-section-title");
+        const subNavbarCollapse = document.getElementById("subNavbarNav");
+
+        const sectionMap = {
+            home: "Home",
+            pdesc: "Project Description",
+            trans: "Data Transformation",
+            con: "Conclusion"
+        };
+
+        function getNavHeight() {
+            const nav = document.querySelector(".navbar");
+            const subNav = document.querySelector(".sub-navbar");
+            return nav.offsetHeight + subNav.offsetHeight;
+        }
+
+        function getCurrentSectionId() {
+            const scrollPosition = window.scrollY + getNavHeight() + 20; // Add a little buffer
+            let currentId = "abt";
+
+            Object.keys(sectionMap).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    const sectionTop = el.offsetTop;
+                    if (scrollPosition >= sectionTop) {
+                        currentId = id;
+                    }
+                }
+            });
+
+            return currentId;
+        }
+
+        function updateActiveNav() {
+            const currentId = getCurrentSectionId();
+            currentSectionTitle.textContent = sectionMap[currentId];
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                const hrefId = link.getAttribute("href").slice(1);
+                if (hrefId === currentId) {
+                    link.classList.add("active");
+                }
+            });
+        }
+
+        function scrollToSection(e) {
+            const id = this.getAttribute("href").slice(1);
+            const target = document.getElementById(id);
+            if (target) {
+                e.preventDefault();
+                const offset = getNavHeight();
+                const position = target.getBoundingClientRect().top + window.scrollY - offset + 100;
+                window.scrollTo({ top: position, behavior: "smooth" });
+            }
+
+            // Close navbar on mobile
+            if (subNavbarCollapse.classList.contains("show")) {
+                bootstrap.Collapse.getInstance(subNavbarCollapse)?.hide();
+            }
+        }
+
+        navLinks.forEach(link => link.addEventListener("click", scrollToSection));
+        window.addEventListener("scroll", updateActiveNav);
+        window.addEventListener("load", updateActiveNav);
+    </script>
+</body>
+</html>
