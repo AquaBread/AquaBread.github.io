@@ -104,7 +104,15 @@
     .card-title {
         color: var(--colorprimary);
     }
-
+    /* Adjust background image cropping on mobile */
+    @media (max-width: 768px) {
+        .hero-section,
+        #contact {
+            background-attachment: scroll; /* Prevents fixed issues on mobile */
+            background-size: auto 100%;    /* Fit height, allow horizontal cropping */
+            background-position: top center;
+        }
+    }
   </style>
 </head>
 <body>
