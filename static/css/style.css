@@ -229,6 +229,10 @@ ul.list-unstyled li h4 {
     transition: background-color .3s ease-in-out;
 }
 
+.custom-color {
+    color: var(--colorprimary) !important;
+}
+
 /* Adjust background image cropping on mobile */
 @media (max-width: 768px) {
     .hero-section,
