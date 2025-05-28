@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project: Title</title>
+    <title>Currency Projector</title>
 
     <!-- Font Awesome (deferred load) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -122,7 +122,7 @@
     <!-- Hero Section -->
     <section class="hero-section text-center text-white py-5">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-3 wordborder">Project Template</span></h1>
+            <h1 class="display-4 fw-bold mb-3 wordborder">Currency Projector</span></h1>
         </div>
     </section>
 
@@ -161,16 +161,81 @@
         
         <!-- Project Description -->
         <h3 id="pdesc">Project Description</h3>
+        <p>
+            Currency-Projector is a machine learning-driven application that analyzes and predicts global currency trends using historical exchange rate data. Developed as part of a collaborative capstone project during a data analytics boot camp, this tool utilizes time-series forecasting and clustering techniques to assist users in understanding currency behaviors and making data-informed financial decisions.
+        </p>
+        <p>
+            The project leverages Python-based machine learning libraries along with advanced visualization tools and cloud-based platforms to create predictive models and segment global currencies into meaningful groups.
+        </p>
+
+        <hr class="section-divider">
+
+        <h3>Tools and Technologies</h3>
+        <p>
+            This project utilized a range of tools and technologies across the data science workflow:
+        </p>
+        <ul style="margin-left: 20px;">
+            <li>
+            <strong>Python:</strong> Used for data preprocessing, modeling, and analysis with key libraries including 
+            <code>pandas</code>, <code>numpy</code>, <code>matplotlib</code>, and <code>seaborn</code> for data manipulation and visualization.
+            </li>
+            <li>
+            <strong>Scikit-learn:</strong> Employed for implementing Linear and Polynomial Regression models and calculating metrics such as R² and RMSE.
+            </li>
+            <li>
+            <strong>Jupyter Notebook:</strong> Provided an interactive coding environment for developing and documenting the analysis.
+            </li>
+            <li>
+            <strong>Tableau:</strong> Used to visualize currency clustering and make insights more accessible to stakeholders.
+            </li>
+            <li>
+            <strong>Git & GitHub:</strong> Version control and collaboration tools to track changes and share progress.
+            </li>
+        </ul>
+
+        <hr class="section-divider">
+
+        <h3>Objectives</h3>
+        <ul>
+            <li>
+                Currency Forecasting: Apply linear and polynomial regression to forecast future currency values based on historical trends.
+            </li>
+            <li>
+                Country Segmentation: Use K-Means clustering to group currencies by behavior and volatility.
+            </li>
+            <li>
+                Interactive Visuals: Empower users to explore trends via visual dashboards (Matplotlib, HvPlot, Tableau).
+            </li>
+            <li>
+                Scalable Infrastructure: Hosted on Google Colab with options to expand to Google Cloud SQL or AWS.
+            </li>
+        </ul>
 
         <hr class="section-divider">
 
         <!-- Visualizations -->
         <h3 id="data">Data Analysis</h3>
+        <p>
+            We began by compiling historical foreign exchange data from over 100 currencies, cleaning and merging the datasets into a single DataFrame with standardized labels for each currency. For initial modeling, we focused on the Chinese Yuan (CNY), filtering the dataset and preprocessing it by removing nulls, dropping irrelevant columns, and converting dates into a numerical format representing days since the dataset’s start.
+        </p>
+        <img src="assets/pCurrencyProj/regressionM.png" alt="Mean Temp vs Trips" style="max-width: 100%; height: auto; padding: 10px;">
+        <p>
+            Exploratory plots revealed long-term currency trends, which informed our selection of predictive models. A Linear Regression model was trained using Scikit-learn to predict closing prices based on time. While it provided a baseline, its performance was limited by the currency’s non-linear behavior.
+        </p>
+        <p>
+            We then applied a Polynomial Regression model (degree 2), which improved accuracy, as shown by higher R² of 0.9925 and lower RMSE values of 0.0015. Both models were used to forecast future rates, including a specific prediction for January 1, 2024.
+        </p>
+        <p>
+            To complement the predictive analysis, we prepared the data for K-Means Clustering to group currencies by behavior. This revealed patterns in currency movement and provided macroeconomic insights, with results visualized in Tableau for accessibility.
+        </p>
 
         <hr class="section-divider">
 
         <!-- Conclusion -->
         <h3 id="con">Conclusion</h3>
+        <p>
+            The Currency-Projector successfully demonstrated the practical application of time-series machine learning models in the financial domain. It not only delivered accurate predictive analytics for currency rates but also provided meaningful clustering insights into regional economic behavior. With further integration of real-time data APIs and expansion into cloud infrastructure, this project could be scaled into a functional fintech solution.
+        </p>
 
         <div class="project-buttons">
             <a href="https://github.com/Stefan-Kniejski/Project-4-Group-2" target="_blank">
