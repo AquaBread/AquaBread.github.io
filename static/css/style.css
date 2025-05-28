@@ -228,3 +228,13 @@ ul.list-unstyled li h4 {
     background-color: rgba(var(--colorsecondary, 255, 255, 255), .85);
     transition: background-color .3s ease-in-out;
 }
+
+/* Adjust background image cropping on mobile */
+@media (max-width: 768px) {
+    .hero-section,
+    #contact {
+        background-attachment: scroll; /* Prevents fixed issues on mobile */
+        background-size: auto 100%;    /* Fit height, allow horizontal cropping */
+        background-position: top center;
+    }
+}
