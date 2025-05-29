@@ -7,6 +7,7 @@ const sectionMap = {
     pdesc: "Project Description",
     data: "Data Analytics",
     proj: "Projects",
+    mthd: "Methodology",
     con: "Conclusion",
     contact: "Contact"
 };
