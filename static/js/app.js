@@ -4,6 +4,7 @@ const subNavbarCollapse = document.getElementById("subNavbarNav");
 
 const sectionMap = {
     abt: "About Me",
+    hero: "Project Description",
     pdesc: "Project Description",
     data: "Data Analytics",
     proj: "Projects",
