@@ -77,18 +77,6 @@
             box-shadow: var(--shadow); /* Optional soft shadow */
         }
 
-        #project-section {
-            max-width: 900px;
-            margin: auto;
-            padding: 2em;
-            line-height: 1.6;
-        }
-
-        #project-section a {
-            color: var(--colorprimary);
-            text-decoration: none;
-        }
-
         .project-buttons {
             margin-top: 20px;
         }
@@ -163,13 +151,11 @@
         </div>
     </nav>
 
-    <!-- Project section for indentation -->
-    <section id="project-section">
+    <hr class="section-divider">
 
-        <hr class="section-divider">
-        
-        <!-- Project Description -->
-        <h3 id="pdesc">Project Description</h3>
+    <!-- Project Description -->
+    <section id="pdesc" class="project-section py-5">
+        <h3>Project Description</h3>
         <p>
             The aim of this project is to analyze the relationship between weather conditions and Uber ride
             usage, especially during extreme weather conditions. The problem we address is whether weather conditions, ranging from subzero temperatures to scorching heat, influence the frequency of ride-sharing usage.
@@ -184,10 +170,12 @@
             </ul>
             </li>
         </ul>
+    </section>
 
-        <hr class="section-divider">
+    <hr class="section-divider">
 
-        <!-- Dataset -->
+    <!-- Dataset -->
+    <section id="dataset" class="project-section py-5">
         <h3 id="dataset">Dataset</h3>
         <p>We used the following data for our analysis:</p>
         <ul>
@@ -206,33 +194,46 @@
                 </a>
             </li>
         </ul>
+    </section>
 
-        <hr class="section-divider">
+    <hr class="section-divider">
 
-        <!-- Research Questions -->
+    <!-- Research Questions -->
+    <section id="research-questions" class="project-section py-5">
+
         <h3 id="research-questions">Research Questions</h3>
         <ol style="color: var(--colortext);">
             <li><strong>Correlation Study:</strong> Is there a specific correlation between weather factors (e.g., temperature, precipitation) and the number of rides?</li>
             <li><strong>Demand Impact:</strong> How does weather influence ride demand for Uber and other FHV companies?</li>
             <li><strong>Strategic Planning:</strong> Can correlations help plan promotions and increase ride shares?</li>
         </ol>
+    </section>
 
-        <hr class="section-divider">
+    <hr class="section-divider">
 
-        <!-- Hypothesis -->
+    <!-- Hypothesis -->
+    <section id="hypothesis" class="project-section py-5">
         <h3 id="hypothesis">Hypothesis</h3>
-        <p><strong>Hypothesis:</strong> Extreme weather conditions significantly affect the demand and geographic distribution of rides.</p>
-        <p><strong>Null Hypothesis:</strong> Extreme weather conditions do not significantly impact ride demand or distribution.</p>
+        <p>
+            <strong>Hypothesis:</strong> Extreme weather conditions significantly affect the demand and geographic distribution of rides.
+        </p>
+        <p>
+            <strong>Null Hypothesis:</strong> Extreme weather conditions do not significantly impact ride demand or distribution.
+        </p>
+    </section>
 
-        <hr class="section-divider">
+    <hr class="section-divider">
 
-        <!-- Visualizations -->
+    <!-- Visualizations -->
+    <section id="data" class="project-section py-5">
         <h3 id="data">Data Analysis</h3>
         <img src="assets/pUberRides/Mean_Temp_vs_trips.jpeg" alt="Mean Temp vs Trips" style="max-width: 100%; height: auto;">
+    </section>
 
-        <hr class="section-divider">
+    <hr class="section-divider">
 
-        <!-- Interpretation & Rec -->
+    <!-- Interpretation & Rec -->
+    <section id="interpretation-and-recommendations" class="project-section py-5">
         <h3 id="interpretation-and-recommendations">Interpretation & Recommendations</h3>
         <p>The strongest observed relationship was between temperature and number of trips—higher temperatures corresponded with fewer trips. Humidity and cloudiness had weaker, yet present, correlations.</p>
 
@@ -242,10 +243,12 @@
             <li><strong>Optimize Fleet Deployment:</strong> Reduce idle time by adjusting driver availability on hot days.</li>
             <li><strong>Explore Humidity and Cloudiness Effects:</strong> These may reveal additional insights with more detailed thresholds.</li>
         </ul>
+    </section>
 
-        <hr class="section-divider">
+    <hr class="section-divider">
 
-        <!-- Limitations -->
+    <!-- Limitations -->
+    <section id="project-limitations" class="project-section py-5">
         <h3 id="project-limitations">Project Limitations</h3>
         <ul>
             <li>Relied on static datasets due to lack of accessible APIs.</li>
@@ -253,10 +256,12 @@
             <li>Geographical scope limited to NYC (not all boroughs equally represented).</li>
             <li>Time constraints due to class schedule and external commitments.</li>
         </ul>
+    </section>
 
-        <hr class="section-divider">
+    <hr class="section-divider">
 
-        <!-- Conclusion -->
+    <!-- Conclusion -->
+    <section id="project-limitations" class="project-section py-5">
         <h3 id="con">Conclusion</h3>
         <p>
             Our analysis supports the hypothesis that extreme weather conditions significantly influence the demand for Uber and other FHV (For-Hire Vehicle) services in New York City. We observed a decrease in ride volume as temperatures increased, suggesting alternative transportation use or reduced travel during hotter weather.
@@ -270,20 +275,22 @@
         <p>
             In summary, weather is a meaningful factor in ride-share demand. Recognizing and responding to this can empower smarter urban transportation strategies.
         </p>
-        
-        <div class="project-buttons">
-            <a href="https://github.com/Barbsbhg/Group1_Project1/tree/main" target="_blank">
-                <button class="button-github">
-                View GitHub Repo
-                </button>
-            </a>
+    </section>
 
-            <a href="https://docs.google.com/presentation/d/1D83LbAhGA92a7RHKmA0KWgydw0dEcBgfd_N1MeQ3gVU/edit?slide=id.p1#slide=id.p1" target="_blank">
-                <button class="button-presentation">
-                View Presentation
-                </button>
-            </a>
-        </div>
+    <section class="project-section py-5">
+        <div class="project-buttons">
+        <a href="https://github.com/Barbsbhg/Group1_Project1/tree/main" target="_blank">
+            <button class="button-github">
+            View GitHub Repo
+            </button>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1D83LbAhGA92a7RHKmA0KWgydw0dEcBgfd_N1MeQ3gVU/edit?slide=id.p1#slide=id.p1" target="_blank">
+            <button class="button-presentation">
+            View Presentation
+            </button>
+        </a>
+    </div>
     </section>
 
     <!-- Contact -->
@@ -316,6 +323,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- External JS -->
-    <script src="static/js/app.js"></script>
+    <script src="../static/js/app.js"></script>
 </body>
 </html>

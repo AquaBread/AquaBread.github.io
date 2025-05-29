@@ -233,6 +233,18 @@ ul.list-unstyled li h4 {
     color: var(--colorprimary) !important;
 }
 
+.project-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 2em;
+    line-height: 1.6;
+}
+
+.project-section a {
+    color: var(--colorprimary);
+    text-decoration: none;
+}
+
 /* Adjust background image cropping on mobile */
 @media (max-width: 768px) {
     .hero-section,
